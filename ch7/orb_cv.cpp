@@ -3,9 +3,13 @@
 #include <opencv2/features2d/features2d.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <chrono>
+#include<vector>
+#include<algorithm>
 
 using namespace std;
+
 using namespace cv;
+
 
 int main(int argc, char **argv) {
   if (argc != 3) {
@@ -16,6 +20,7 @@ int main(int argc, char **argv) {
   Mat img_1 = imread(argv[1], CV_LOAD_IMAGE_COLOR);
   Mat img_2 = imread(argv[2], CV_LOAD_IMAGE_COLOR);
   assert(img_1.data != nullptr && img_2.data != nullptr);
+  cout << "\\" << endl;
 
   //-- 初始化
   std::vector<KeyPoint> keypoints_1, keypoints_2;
@@ -74,6 +79,8 @@ int main(int argc, char **argv) {
   imshow("all matches", img_match);
   imshow("good matches", img_goodmatch);
   waitKey(0);
+  
+
 
   return 0;
 }

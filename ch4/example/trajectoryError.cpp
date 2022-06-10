@@ -96,7 +96,7 @@ void DrawTrajectory(const TrajectoryType &gt, const TrajectoryType &esti) {
       glEnd();
     }
     pangolin::FinishFrame();
-    usleep(5000);   // sleep 5 ms
+    usleep(1000);   // sleep 5 ms
   }
 
 }

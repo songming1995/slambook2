@@ -15,7 +15,9 @@ void showPointCloud(
     const vector<Vector6d, Eigen::aligned_allocator<Vector6d>> &pointcloud);
 
 int main(int argc, char **argv) {
+
     vector<cv::Mat> colorImgs, depthImgs;    // 彩色图和深度图
+    
     TrajectoryType poses;         // 相机位姿
 
     ifstream fin("./pose.txt");
